@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vale por descubrir pistas</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.65), transparent 35%),
+        linear-gradient(145deg, #fff1d8, #f8c7d9 50%, #d8d6ff);
+      color: #54384f;
+      overflow: hidden;
+    }
+    .decoration {
+      position: fixed;
+      font-size: 60px;
+      opacity: .34;
+      animation: float 5s ease-in-out infinite;
+    }
+    .d1 { top: 7%; left: 7%; }
+    .d2 { bottom: 8%; right: 8%; animation-delay: 1.3s; }
+    .d3 { top: 16%; right: 13%; animation-delay: 2.2s; }
+    @keyframes float { 50% { transform: translateY(-15px) rotate(8deg); } }
+
+    .card {
+      width: min(780px, 100%);
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(255,255,255,.96);
+      border-radius: 34px;
+      padding: 42px 26px;
+      text-align: center;
+      box-shadow: 0 24px 65px rgba(108, 70, 107, .22);
+      position: relative;
+      z-index: 2;
+    }
+    .pill {
+      display: inline-block;
+      background: #fff2f7;
+      color: #b2487f;
+      padding: 10px 17px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    h1 {
+      color: #a83f79;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.02;
+      letter-spacing: -1px;
+    }
+    .subtitle {
+      max-width: 610px;
+      margin: 20px auto 0;
+      color: #6c5264;
+      font-size: 19px;
+      line-height: 1.55;
+    }
+    .ticket {
+      max-width: 600px;
+      margin: 28px auto;
+      padding: 20px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff9fc, #fff8ee);
+      border: 2px dashed #d98aac;
+      color: #704f63;
+      line-height: 1.55;
+    }
+    .ticket strong { color: #a83f79; }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 16px 27px;
+      border-radius: 999px;
+      color: white;
+      background: linear-gradient(135deg, #a83f79, #d66b98);
+      font-weight: 800;
+      font-size: 17px;
+      box-shadow: 0 12px 25px rgba(168, 63, 121, .25);
+      transition: .2s ease;
+    }
+    a:hover { transform: translateY(-2px); }
+    .footer { color: #a83f79; margin-top: 20px; font-weight: 800; }
+  </style>
+</head>
+<body>
+  <div class="decoration d1">🎁</div>
+  <div class="decoration d2">✨</div>
+  <div class="decoration d3">🔒</div>
+
+  <main class="card">
+    <div class="pill">🎁 Vale especial</div>
+    <h1>Vale por descubrir<br />pistas sorpresa</h1>
+
+    <p class="subtitle">
+      Detrás de cada rasca se esconde una pista relacionada con una sorpresa.
+      Algunas tendrán que esperar un poquito antes de poder descubrirse.
+    </p>
+
+    <section class="ticket">
+      <strong>Primera misión:</strong> entra en la página de pistas, busca cuál está desbloqueada y rasca para descubrir el primer secreto.
+    </section>
+
+    <a href="pistas.html">Canjear vale</a>
+    <div class="footer">Las sorpresas llegan poco a poco ❤️</div>
+  </main>
+</body>
+</html>
